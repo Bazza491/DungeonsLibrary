@@ -10,8 +10,7 @@ public class PlayerCharacter {
     private String name;
     private String race;
     private String theClass;
-    private String alignment1;
-    private String alignment2;
+    private Alignment alignment;
     private int ac;
     private int maxHP;
     private int hp;
@@ -35,15 +34,14 @@ public class PlayerCharacter {
     private Attack[] attacks = new Attack[50];
     private int amountOfAttacks = 0;
 
-    public PlayerCharacter(String name, String race, String theClass, String alignment1, String alignment2, int ac,
+    public PlayerCharacter(String name, String race, String theClass, Alignment alignment, int ac,
                            int maxHP, int hp, int tempHP, int speed, String otherSpeeds, int str, int dex, int con,
                            int intel, int wis, int cha, SaveThrow saveThrowProfs, String skills,
                            int proficiencyModifier, String senses, Language languages, int level) {
         this.name = name;
         this.race = race;
         this.theClass = theClass;
-        this.alignment1 = alignment1;
-        this.alignment2 = alignment2;
+        this.alignment = alignment;
         this.ac = ac;
         this.maxHP = maxHP;
         this.hp = hp;

@@ -4,52 +4,61 @@
 class OtherVariables {
     boolean inMeleeRange
     distanceFromTarget
-
 }
 
 
 
 abstract class  Attack {
-    AttackName: String
-    dieType: int
-    damageType: DamageType
-    otherEffects: String
-
-
-
-
-
-    static targetAC: int
-    static targetSaveProficiency: int
+    #AttackName: String
+    #dieType: int
+    #damageType: DamageType
+    #otherEffects: String
 }
 abstract class SpellAttack {
-    dieVolume: int
-    spellModifier: int
-}
-class WeaponAttack {
-    dmgBonus: int
-    attackBonus: int
-    numOfAttacks: int
-
-    --
-    +print()
-}
-class GreatWeaponAttack {
-
-    --
-    +print()
+    #dieVolume: int
+    #spellModifier: int
 }
 class RangedSpellAttack {
-
+    .. Target Based ..
+    {static} #targetAC: int
     --
-    +print()
+    +print(): void
+    +roll(): void
+    +damage()
+    +attackMonster(): void
 }
 class SaveSpellAttack {
-    spellSaveDC: int
-
+    #spellSaveDC: int
+    .. Target Based ..
+    {static} #targetSaveProficiency: int
     --
-    +print()
+    +print(): void
+    +roll(): void
+    +damage()
+    +attackMonster(): void
 }
+class WeaponAttack {
+    #dmgBonus: int
+    #attackBonus: int
+    #numOfAttacks: int
+    .. Target Based ..
+    {static} #targetAC: int
+    --
+    +print(): void
+    +roll(): void
+    +damage()
+    +attackMonster(): void
+}
+class GreatWeaponAttack {
+    #dieType = 6
+    #dieVolume = 2
+    --
+    +print(): void
+    +roll(): void
+    +damage()
+    +attackMonster(): void
+}
+
 
 
 
