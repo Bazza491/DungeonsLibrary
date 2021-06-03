@@ -1,0 +1,64 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class OtherVariables {
+    boolean inMeleeRange
+    distanceFromTarget
+
+}
+
+
+
+abstract class  Attack {
+    AttackName: String
+    dieType: int
+    damageType: DamageType
+    otherEffects: String
+
+
+
+
+
+    static targetAC: int
+    static targetSaveProficiency: int
+}
+abstract class SpellAttack {
+    dieVolume: int
+    spellModifier: int
+}
+class WeaponAttack {
+    dmgBonus: int
+    attackBonus: int
+    numOfAttacks: int
+
+    --
+    +print()
+}
+class GreatWeaponAttack {
+
+    --
+    +print()
+}
+class RangedSpellAttack {
+
+    --
+    +print()
+}
+class SaveSpellAttack {
+    spellSaveDC: int
+
+    --
+    +print()
+}
+
+
+
+Attack --|> SpellAttack
+Attack --|> WeaponAttack
+WeaponAttack --|> GreatWeaponAttack
+SpellAttack --|> RangedSpellAttack
+SpellAttack --|> SaveSpellAttack
+
+
+
+@enduml
