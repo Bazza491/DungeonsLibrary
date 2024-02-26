@@ -63,10 +63,9 @@ public class Attack {
     public void roll() {
         int totalDmg = 0;
         String rolls = "";
-//        int roll = false;
         boolean attackHits = false;
         int timesToRoll = this.dieVolume;
-        int theRollToHit = this.d20.r() + this.attackBonus;
+        int theRollToHit = this.d20.roll() + this.attackBonus;
         String rollResults;
         int saveThrow;
         int roll;
@@ -81,14 +80,14 @@ public class Attack {
                         rolls = rolls + theRollToHit + " misses ";
                     }
 
-                    theRollToHit = this.d20.r() + this.attackBonus;
+                    theRollToHit = this.d20.roll() + this.attackBonus;
                 }
 
                 rollResults = "Rolling... \nYour rolls: " + rolls + " \nTotal damage: " + totalDmg + " damage\n" + this.otherEffects;
                 System.out.println(rollResults);
                 break;
             case RANGED_SPELL:
-                theRollToHit = this.d20.r();
+                theRollToHit = this.d20.roll();
                 if (theRollToHit > targetAC) {
                     attackHits = true;
                 }
@@ -111,7 +110,7 @@ public class Attack {
                 System.out.print(rollResults);
                 break;
             case SAVE_SPELL:
-                saveThrow = this.d20.r() + saveProficiency;
+                saveThrow = this.d20.roll() + saveProficiency;
                 if (saveThrow < this.spellSaveDC) {
                     attackHits = true;
                 }
@@ -143,10 +142,9 @@ public class Attack {
     public int damage() {
         int totalDmg = 0;
         String rolls = "";
-//        int roll = false;
         boolean attackHits = false;
         int timesToRoll = this.dieVolume;
-        int theRollToHit = this.d20.r() + this.attackBonus;
+        int theRollToHit = this.d20.roll() + this.attackBonus;
         String rollResults;
         int saveThrow;
         int roll;
@@ -161,14 +159,14 @@ public class Attack {
                         rolls = rolls + theRollToHit + " misses ";
                     }
 
-                    theRollToHit = this.d20.r() + this.attackBonus;
+                    theRollToHit = this.d20.roll() + this.attackBonus;
                 }
 
                 rollResults = "Rolling... \nYour rolls: " + rolls + " \nTotal damage: " + totalDmg + " damage\n" + this.otherEffects;
                 System.out.println(rollResults);
                 return totalDmg;
             case RANGED_SPELL:
-                theRollToHit = this.d20.r();
+                theRollToHit = this.d20.roll();
                 if (theRollToHit > targetAC) {
                     attackHits = true;
                 }
@@ -191,7 +189,7 @@ public class Attack {
                 System.out.print(rollResults);
                 return totalDmg;
             case SAVE_SPELL:
-                saveThrow = this.d20.r() + saveProficiency;
+                saveThrow = this.d20.roll() + saveProficiency;
                 if (saveThrow < this.spellSaveDC) {
                     attackHits = true;
                 }
@@ -239,7 +237,7 @@ public class Attack {
         switch(this.attackType) {
             case WEAPON:
                 for(saveThrow = this.numOfAttacks; saveThrow > 0; --saveThrow) {
-                    theRollToHit = this.d20.r() + this.attackBonus;
+                    theRollToHit = this.d20.roll() + this.attackBonus;
                     if (theRollToHit > target.getAC()) {
                         roll = (int)(Math.random() * (double)this.dieType) + 1;
                         rolls = rolls + theRollToHit + " hits for " + (roll + this.dmgBonus) + " damage ";
@@ -253,7 +251,7 @@ public class Attack {
                 System.out.println(rollResults);
                 break;
             case RANGED_SPELL:
-                theRollToHit = this.d20.r();
+                theRollToHit = this.d20.roll();
                 if (theRollToHit > targetAC) {
                     attackHits = true;
                 }
@@ -276,7 +274,7 @@ public class Attack {
                 System.out.print(rollResults);
                 break;
             case SAVE_SPELL:
-                saveThrow = this.d20.r() + saveProficiency;
+                saveThrow = this.d20.roll() + saveProficiency;
                 if (saveThrow < this.spellSaveDC) {
                     attackHits = true;
                 }

@@ -5,4 +5,11 @@ public abstract class NewAttack {
     protected int dieType;
     protected DamageType damageType;
     protected String otherEffects;
+
+    protected NewAttack (String attackName, int dieType, DamageType damageType, String otherEffects) {
+        this.attackName = attackName;
+        this.dieType = dieType;
+        this.damageType = damageType;
+        this.otherEffects = otherEffects;
+    }
 }

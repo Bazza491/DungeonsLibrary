@@ -9,7 +9,7 @@ public class Die {
         this.faces = faces;
     }
 
-    public int r() {
+    public int roll() {
         ++diceRolled;
         ++this.timesRolled;
         return (int)(Math.random() * (double)this.faces) + 1;

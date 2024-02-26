@@ -167,29 +167,29 @@ enum Type {
 }
 
 enum Weapon {
-    CLUB("club", 1, Coin.SP, 4, DamageType.BLUDGEONING, 2.0F, WeaponType.SIMPLE_MELEE, false, new WeaponProperty[]{WeaponProperty.LIGHT}),
-    DAGGER("dagger", 2, Coin.GP, 4, DamageType.PIERCING, 1.0F, WeaponType.SIMPLE_MELEE, false, new WeaponProperty[]{WeaponProperty.FINESSE, WeaponProperty.LIGHT, WeaponProperty.THROWN, WeaponProperty.RANGE}),
-    GREATCLUB("greatclub", 2, Coin.SP, 8, DamageType.BLUDGEONING, 10.0F, WeaponType.SIMPLE_MELEE, false, new WeaponProperty[]{WeaponProperty.TWO_HANDED}),
-    HANDAXE("handaxe", 5, Coin.GP, 2, DamageType.SLASHING, 6.0F, WeaponType.SIMPLE_MELEE, false, new WeaponProperty[]{WeaponProperty.LIGHT, WeaponProperty.THROWN, WeaponProperty.RANGE}),
-    JAVELIN("javelin", 5, Coin.SP, 6, DamageType.PIERCING, 2.0F, WeaponType.SIMPLE_MELEE, false, new WeaponProperty[]{WeaponProperty.THROWN, WeaponProperty.RANGE}),
-    LIGHT_HAMMER("", 2, Coin.GP, 4, DamageType.BLUDGEONING, 2.0F, WeaponType.SIMPLE_MELEE, false, new WeaponProperty[]{WeaponProperty.LIGHT, WeaponProperty.THROWN, WeaponProperty.RANGE}),
-    MACE("mace", 5, Coin.GP, 6, DamageType.BLUDGEONING, 4.0F, WeaponType.SIMPLE_MELEE, false, new WeaponProperty[]{WeaponProperty.NA}),
-    QUARTERSTAFF("quarterstaff", 2, Coin.SP, 6, DamageType.BLUDGEONING, 4.0F, WeaponType.SIMPLE_MELEE, false, new WeaponProperty[]{WeaponProperty.VERSATILE}),
-    SICKLE("sickle", 1, Coin.GP, 4, DamageType.SLASHING, 2.0F, WeaponType.SIMPLE_MELEE, false, new WeaponProperty[]{WeaponProperty.LIGHT}),
-    SPEAR("spear", 1, Coin.GP, 6, DamageType.PIERCING, 3.0F, WeaponType.SIMPLE_MELEE, false, new WeaponProperty[]{WeaponProperty.THROWN, WeaponProperty.VERSATILE}),
-    CROSSBOW_LIGHT("crossbow_light", 25, Coin.GP, 8, DamageType.PIERCING, 5.0F, WeaponType.SIMPLE_RANGED, false, new WeaponProperty[]{WeaponProperty.AMMUNITION, WeaponProperty.LOADING, WeaponProperty.TWO_HANDED}),
-    DART("dart", 5, Coin.CP, 4, DamageType.PIERCING, 0.25F, WeaponType.SIMPLE_MELEE, false, new WeaponProperty[]{WeaponProperty.FINESSE, WeaponProperty.THROWN, WeaponProperty.RANGE}),
-    SHORTBOW("shortbow", 25, Coin.GP, 6, DamageType.PIERCING, 2.0F, WeaponType.SIMPLE_MELEE, false, new WeaponProperty[]{WeaponProperty.AMMUNITION, WeaponProperty.RANGE, WeaponProperty.TWO_HANDED}),
-    SLING("sling", 1, Coin.SP, 4, DamageType.BLUDGEONING, 0.0F, WeaponType.SIMPLE_MELEE, false, new WeaponProperty[]{WeaponProperty.AMMUNITION, WeaponProperty.RANGE}),
-    BATTLEAXE("battleaxe", 10, Coin.GP, 8, DamageType.SLASHING, 4.0F, WeaponType.MARTIAL_MELEE, false, new WeaponProperty[]{WeaponProperty.VERSATILE}),
-    FLAIL("flail", 10, Coin.GP, 8, DamageType.BLUDGEONING, 2.0F, WeaponType.MARTIAL_MELEE, false, new WeaponProperty[]{WeaponProperty.NA}),
-    GLAIVE("glaive", 20, Coin.GP, 10, DamageType.SLASHING, 6.0F, WeaponType.MARTIAL_MELEE, false, new WeaponProperty[]{WeaponProperty.HEAVY, WeaponProperty.REACH, WeaponProperty.TWO_HANDED}),
-    GREATAXE("greataxe", 30, Coin.GP, 12, DamageType.SLASHING, 7.0F, WeaponType.MARTIAL_MELEE, false, new WeaponProperty[]{WeaponProperty.HEAVY, WeaponProperty.TWO_HANDED}),
-    GREATSWORD("greatsword", 50, Coin.GP, 6, DamageType.SLASHING, 6.0F, WeaponType.MARTIAL_MELEE, true, new WeaponProperty[]{WeaponProperty.HEAVY, WeaponProperty.TWO_HANDED}),
-    HALBERD("halberd", 20, Coin.GP, 10, DamageType.SLASHING, 6.0F, WeaponType.MARTIAL_MELEE, false, new WeaponProperty[]{WeaponProperty.TWO_HANDED, WeaponProperty.HEAVY, WeaponProperty.REACH}),
-    LANCE("lance", 10, Coin.GP, 12, DamageType.PIERCING, 6.0F, WeaponType.MARTIAL_MELEE, false, new WeaponProperty[]{WeaponProperty.REACH, WeaponProperty.SPECIAL}),
-    LONGSWORD("longsword", 15, Coin.GP, 8, DamageType.SLASHING, 3.0F, WeaponType.MARTIAL_MELEE, false, new WeaponProperty[]{WeaponProperty.VERSATILE}),
-    MAUL("maul", 10, Coin.GP, 6, DamageType.BLUDGEONING, 10.0F, WeaponType.MARTIAL_MELEE, true, new WeaponProperty[]{WeaponProperty.TWO_HANDED, WeaponProperty.HEAVY});
+    CLUB("club", 1, Coin.SP, 4, DamageType.BLUDGEONING, 2.0F, WeaponType.SIMPLE_MELEE, false, WeaponProperty.LIGHT),
+    DAGGER("dagger", 2, Coin.GP, 4, DamageType.PIERCING, 1.0F, WeaponType.SIMPLE_MELEE, false, WeaponProperty.FINESSE, WeaponProperty.LIGHT, WeaponProperty.THROWN, WeaponProperty.RANGE),
+    GREATCLUB("greatclub", 2, Coin.SP, 8, DamageType.BLUDGEONING, 10.0F, WeaponType.SIMPLE_MELEE, false, WeaponProperty.TWO_HANDED),
+    HANDAXE("handaxe", 5, Coin.GP, 2, DamageType.SLASHING, 6.0F, WeaponType.SIMPLE_MELEE, false, WeaponProperty.LIGHT, WeaponProperty.THROWN, WeaponProperty.RANGE),
+    JAVELIN("javelin", 5, Coin.SP, 6, DamageType.PIERCING, 2.0F, WeaponType.SIMPLE_MELEE, false, WeaponProperty.THROWN, WeaponProperty.RANGE),
+    LIGHT_HAMMER("", 2, Coin.GP, 4, DamageType.BLUDGEONING, 2.0F, WeaponType.SIMPLE_MELEE, false, WeaponProperty.LIGHT, WeaponProperty.THROWN, WeaponProperty.RANGE),
+    MACE("mace", 5, Coin.GP, 6, DamageType.BLUDGEONING, 4.0F, WeaponType.SIMPLE_MELEE, false, WeaponProperty.NA),
+    QUARTERSTAFF("quarterstaff", 2, Coin.SP, 6, DamageType.BLUDGEONING, 4.0F, WeaponType.SIMPLE_MELEE, false, WeaponProperty.VERSATILE),
+    SICKLE("sickle", 1, Coin.GP, 4, DamageType.SLASHING, 2.0F, WeaponType.SIMPLE_MELEE, false, WeaponProperty.LIGHT),
+    SPEAR("spear", 1, Coin.GP, 6, DamageType.PIERCING, 3.0F, WeaponType.SIMPLE_MELEE, false, WeaponProperty.THROWN, WeaponProperty.VERSATILE),
+    CROSSBOW_LIGHT("crossbow_light", 25, Coin.GP, 8, DamageType.PIERCING, 5.0F, WeaponType.SIMPLE_RANGED, false, WeaponProperty.AMMUNITION, WeaponProperty.LOADING, WeaponProperty.TWO_HANDED),
+    DART("dart", 5, Coin.CP, 4, DamageType.PIERCING, 0.25F, WeaponType.SIMPLE_MELEE, false, WeaponProperty.FINESSE, WeaponProperty.THROWN, WeaponProperty.RANGE),
+    SHORTBOW("shortbow", 25, Coin.GP, 6, DamageType.PIERCING, 2.0F, WeaponType.SIMPLE_MELEE, false, WeaponProperty.AMMUNITION, WeaponProperty.RANGE, WeaponProperty.TWO_HANDED),
+    SLING("sling", 1, Coin.SP, 4, DamageType.BLUDGEONING, 0.0F, WeaponType.SIMPLE_MELEE, false, WeaponProperty.AMMUNITION, WeaponProperty.RANGE),
+    BATTLEAXE("battleaxe", 10, Coin.GP, 8, DamageType.SLASHING, 4.0F, WeaponType.MARTIAL_MELEE, false, WeaponProperty.VERSATILE),
+    FLAIL("flail", 10, Coin.GP, 8, DamageType.BLUDGEONING, 2.0F, WeaponType.MARTIAL_MELEE, false, WeaponProperty.NA),
+    GLAIVE("glaive", 20, Coin.GP, 10, DamageType.SLASHING, 6.0F, WeaponType.MARTIAL_MELEE, false, WeaponProperty.HEAVY, WeaponProperty.REACH, WeaponProperty.TWO_HANDED),
+    GREATAXE("greataxe", 30, Coin.GP, 12, DamageType.SLASHING, 7.0F, WeaponType.MARTIAL_MELEE, false, WeaponProperty.HEAVY, WeaponProperty.TWO_HANDED),
+    GREATSWORD("greatsword", 50, Coin.GP, 6, DamageType.SLASHING, 6.0F, WeaponType.MARTIAL_MELEE, true, WeaponProperty.HEAVY, WeaponProperty.TWO_HANDED),
+    HALBERD("halberd", 20, Coin.GP, 10, DamageType.SLASHING, 6.0F, WeaponType.MARTIAL_MELEE, false, WeaponProperty.TWO_HANDED, WeaponProperty.HEAVY, WeaponProperty.REACH),
+    LANCE("lance", 10, Coin.GP, 12, DamageType.PIERCING, 6.0F, WeaponType.MARTIAL_MELEE, false, WeaponProperty.REACH, WeaponProperty.SPECIAL),
+    LONGSWORD("longsword", 15, Coin.GP, 8, DamageType.SLASHING, 3.0F, WeaponType.MARTIAL_MELEE, false, WeaponProperty.VERSATILE),
+    MAUL("maul", 10, Coin.GP, 6, DamageType.BLUDGEONING, 10.0F, WeaponType.MARTIAL_MELEE, true, WeaponProperty.TWO_HANDED, WeaponProperty.HEAVY);
 
     private final String name;
     private final int cost;
@@ -210,12 +210,47 @@ enum Weapon {
         this.damageType = damageType;
         this.weaponType = weaponType;
         this.is2d6 = is2d6;
-        this.propertiesList = new ArrayList(1);
+        this.propertiesList = new ArrayList(100);
 
         for(int index = 0; index < property.length; ++index) {
             this.propertiesList.add(property[index]);
         }
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getCost() {
+        return cost;
+    }
+
+    public Coin getCoin() {
+        return coin;
+    }
+
+    public int getDieType() {
+        return dieType;
+    }
+
+    public float getWeight() {
+        return weight;
+    }
+
+    public DamageType getDamageType() {
+        return damageType;
+    }
+
+    public WeaponType getWeaponType() {
+        return weaponType;
+    }
+
+    public boolean isIs2d6() {
+        return is2d6;
+    }
+
+    public List<WeaponProperty> getPropertiesList() {
+        return propertiesList;
     }
 }
 enum WeaponProperty {

@@ -10,6 +10,7 @@ public class StatBlock {
     private int intel;
     private int wis;
     private int cha;
+    private int profBonus;
 
     public StatBlock(int str, int dex, int con, int intel, int wis, int cha) {
         this.str = str;
@@ -66,5 +67,13 @@ public class StatBlock {
 
     public void setCha(int cha) {
         this.cha = cha;
+    }
+
+    public int getProfBonus() {
+        return this.profBonus;
+    }
+
+    public void setProfBonus(int profBonus) {
+        this.profBonus = profBonus;
     }
 }

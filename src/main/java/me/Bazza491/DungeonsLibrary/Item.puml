@@ -1,0 +1,36 @@
+@startuml
+interface Breakable {
+    destroy(): void
+    damage(): void
+    repair(): void
+    getHp(): int
+    getMaxHp(): int
+    setMaxHp(): void
+    setDefault(): void
+    getItemSize(): ItemSize
+    getItemMaterial(): itemMaterial
+}
+abstract class Item implements Breakable{
+    #name: String
+    #amount: int
+    #value: Value
+    --
+    +buy(Wallet wallet)
+}
+class WeaponItem extends Item{
+    #name: String
+    #dieType: int
+    #damageType: DamageType
+    #weight: float
+    #weaponType: WeaponType
+    #properties: List<WeaponProperty>
+    #range: Range
+}
+class RangedWeaponItem extends WeaponItem {
+    #lowerRange: int
+    #upperRange: int
+}
+class GreatWeaponItem extends WeaponItem {
+    {static} {final} dieVolume: int
+}
+@enduml

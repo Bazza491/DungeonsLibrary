@@ -9,7 +9,7 @@ class OtherVariables {
 
 
 abstract class  Attack {
-    #AttackName: String
+    #name: String
     #dieType: int
     #damageType: DamageType
     #otherEffects: String
@@ -48,10 +48,13 @@ class WeaponAttack {
     +roll(): void
     +damage()
     +attackMonster(): void
+    +WeaponAttack(Weapon)
 }
 class GreatWeaponAttack {
     #dieType = 6
     #dieVolume = 2
+    .. Target Based ..
+
     --
     +print(): void
     +roll(): void
@@ -59,15 +62,10 @@ class GreatWeaponAttack {
     +attackMonster(): void
 }
 
-
-
-
-Attack --|> SpellAttack
-Attack --|> WeaponAttack
-WeaponAttack --|> GreatWeaponAttack
-SpellAttack --|> RangedSpellAttack
-SpellAttack --|> SaveSpellAttack
-
-
+Attack <|-- SpellAttack
+Attack <|-- WeaponAttack
+WeaponAttack <|-- GreatWeaponAttack
+SpellAttack <|-- RangedSpellAttack
+SpellAttack <|-- SaveSpellAttack
 
 @enduml

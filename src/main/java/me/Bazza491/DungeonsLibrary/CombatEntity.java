@@ -1,6 +1,7 @@
 package me.Bazza491.DungeonsLibrary;
 
 
+import java.util.List;
 
 public interface CombatEntity {
 
@@ -10,21 +11,22 @@ public interface CombatEntity {
     int getHp();
 
     /**
-     * Sets the HP of the Entity
+     * Sets the HP of the Entity to hp
      * This should check that the Entity is not dead or unconscious and (optionally) Should not be able to set HP above
      * maxHP
      *
      * This should not be used to deal damage to the Entity, this is solely for specific abilities/spells that set an
      * Entities HP to a specific value, such as returning to 1 hit points after regaining consciousness.
      */
-
     void setHp(int hp);
+
     /**
      * Subtracts hp from this.hp and checks that the Entity is not dead or unconscious.
      *
      * if entity is dead, HP should equal 0 or null, and isDead should be set to false.
      */
     void dealDamage(int damage);
+
     /**
      * Checks if the Entities list of vulnerabilities, resistances or immunities contains the DamageType then subtracts
      * hp from the entities HP. Then, it finally checks that the Entity is not dead or unconscious.
@@ -33,11 +35,42 @@ public interface CombatEntity {
      * isUnconscious should be set to true and HP should equal 0.
      */
     void dealDamage(int damage, DamageType damageType);
+
     /**
      * Resets the entities relevant resources etc. to their default amounts. HP is set to the max HP, spell slots are
      * re-filled, etc.
      */
     void reset();
+
+    /**
+     *
+     */
+    void giveTempHp();
+
+    /**
+     *
+     */
+    int getAc();
+    void setAc(); //
+    int getStr();
+    void setStr(int str);
+    int getDex();
+    void setDex(int dex);
+    int getCon();
+    void setCon(int con);
+    int getIntel();
+    void setIntel(int intel);
+    int getWis();
+    void setWis(int wis);
+    int getCha();
+    void setCha();
+
+
+    void addAttack();//
+    void attack(CombatEntity target);
+    Attack getAttack(int attackNo);
+    List<Attack> getAttackList();
+
 
 
     /*
